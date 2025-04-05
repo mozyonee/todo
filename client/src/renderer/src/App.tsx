@@ -40,24 +40,29 @@ function App(): JSX.Element {
 			</button>
 			{error && <div className="text-red-500 p-2 border border-red-300 rounded">{error}</div>}
 			{
-				[...tasks].reverse().map((task: TaskProps) => {
-					return (
-						<Task
-							key={task.id}
-							data={{
-								id: task.id,
-								header: task.header,
-								description: task.description,
-								status: task.status,
-								createdAt: task.createdAt,
-							}}
-							onDelete={handleDelete}
-							query={query}
-							searchStatus={status}
-							setTasks={setTasks}
-						/>
-					);
+				[...tasks].sort((a, b) => {
+					const dateA = a.createdAt ? new Date(a.createdAt).getTime() : 0;
+					const dateB = b.createdAt ? new Date(b.createdAt).getTime() : 0;
+					return dateB - dateA;
 				})
+					.map((task: TaskProps) => {
+						return (
+							<Task
+								key={task.id}
+								data={{
+									id: task.id,
+									header: task.header,
+									description: task.description,
+									status: task.status,
+									createdAt: task.createdAt,
+								}}
+								onDelete={handleDelete}
+								query={query}
+								searchStatus={status}
+								setTasks={setTasks}
+							/>
+						);
+					})
 			}
 		</main>
 	);
