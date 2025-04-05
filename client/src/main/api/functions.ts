@@ -1,10 +1,11 @@
 import api from "./helper";
 import { ipcMain } from "electron";
 
+
 const registerIpcHandlers = () => {
 	ipcMain.handle('get-tasks', async (_event, query, status) => {
 		const link = '/tasks?' + (query && `&query=${query}`) + (status && `&status=${status}`);
-		console.log(link);
+
 		const response = await api.get(link);
 		return response.data;
 	});
