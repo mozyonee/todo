@@ -45,11 +45,6 @@ export default function Search({ query, setQuery, status, setStatus }: SearchPro
 				<Option value="done">Done</Option>
 				<Option value="undone">Undone</Option>
 			</Select>
-
-
-			<button className="rounded-xl border-2 border-black text-black px-4 py-2 cursor-pointer hover:bg-neutral-300">
-				Search
-			</button>
 		</nav>
 	);
 }
