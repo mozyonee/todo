@@ -41,7 +41,7 @@ export default function Search({ query, setQuery, status, setStatus }: SearchPro
 					},
 				}}
 			>
-				<Option value="">All</Option> {/* This is the "deselect" option */}
+				<Option value="">All</Option>
 				<Option value="done">Done</Option>
 				<Option value="undone">Undone</Option>
 			</Select>
