@@ -79,7 +79,7 @@ export default function Task({ data, onDelete, query, searchStatus, setTasks }: 
 						<Option value="undone">Undone</Option>
 					</Select>
 				) :
-					(<div className={`bg-${status === 'done' ? 'green' : 'red'}-400 px-4 py-2 rounded text-white`}>{status === 'done' ? 'Done' : 'Undone'}</div>)
+					(<div className={`${status === 'undone' ? 'bg-red-400' : 'bg-green-400'} px-4 py-2 rounded text-white`}>{status === 'done' ? 'Done' : 'Undone'}</div>)
 				}
 
 				<button onClick={handleEditToggle}
