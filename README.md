@@ -1,9 +1,9 @@
-<details>
-    <summary>Українська</summary>
-    <pre>
+<details><summary>Українська</summary><pre>
 Інструкція по запуску
 
-Перш за все, проект необхідно клонувати репозиторій у зручну директорію.
+Перш за все, необхідно клонувати репозиторій у зручну директорію.
+
+- Ручна установка
 
 Перед запуском проекту, якщо ви хочете запустити проект на своєму комп'ютері, без використання хмар - ви маєте мати PostgreSQL встановленим та запущеним.
 Далі, скопійовану для підключення до бази даних потрібно додати у .env файл сервера.
@@ -22,12 +22,17 @@ npm run build:win
 dist\ToDo-setup.exe
 ```
 Готово! Програма відкрилася та працює належним чином.
-    </pre>
-</details>
+
+- Автоматична установка
+
+Для автоматичного встановлення просто запустіть файл setup.bat у кореневій папці та попередньо налаштуйте файли .env в обох папках.
+</pre></details>
 
 # How to build and deploy?
 
 First of all, you need to clone the project repository to a convenient directory.
+
+## Manual installation
 
 Before launching the project, if you want to run the database on your own computer, without using the cloud, you must have PostgreSQL installed and running.
 Then you need to add the copied database connection link to the .env file in the server folder.
@@ -46,3 +51,6 @@ npm run build:win
 dist\ToDo-setup.exe
 ```
 Done! The application has opened and is working properly.
+
+## Automatic installation
+For automatic installation, simply run the setup.bat file in the root folder, and configure the .env files in both folders beforehand.
