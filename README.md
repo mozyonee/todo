@@ -1,5 +1,5 @@
 <details><summary>Українська</summary><pre>
-Інструкція по запуску
+Інструкція по запуску (для Windows)
 
 Перш за все, необхідно клонувати репозиторій у зручну директорію.
 
@@ -28,7 +28,7 @@ dist\ToDo-setup.exe
 Для автоматичного встановлення просто запустіть файл setup.bat у кореневій папці та попередньо налаштуйте файли .env в обох папках.
 </pre></details>
 
-# How to build and deploy?
+# How to build and deploy? (for Windows)
 
 First of all, you need to clone the project repository to a convenient directory.
 
