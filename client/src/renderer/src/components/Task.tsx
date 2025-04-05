@@ -35,7 +35,6 @@ export default function Task({ data, onDelete, query, searchStatus, setTasks }: 
 
 	return (
 		<div className="border-2 border-black rounded-xl p-5">
-			{data.id}
 			<div>
 				{isEditing ? (
 					<>

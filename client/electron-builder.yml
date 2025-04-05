@@ -1,5 +1,5 @@
 appId: com.electron.app
-productName: package.json
+productName: ToDo
 directories:
   buildResources: build
 files:
@@ -7,14 +7,20 @@ files:
   - '!src/*'
   - '!electron.vite.config.{js,ts,mjs,cjs}'
   - '!{.eslintignore,.eslintrc.cjs,.prettierignore,.prettierrc.yaml,dev-app-update.yml,CHANGELOG.md,README.md}'
-  - '!{.env,.env.*,.npmrc,pnpm-lock.yaml}'
+  - '!{.env.*,.npmrc,pnpm-lock.yaml}'
   - '!{tsconfig.json,tsconfig.node.json,tsconfig.web.json}'
+
+# Ensure the .env file is included in the build output
+extraResources:
+  - from: ./.env
+    to: ./.env
+
 asarUnpack:
   - resources/**
 win:
-  executableName: package.json
+  executableName: ToDo
 nsis:
-  artifactName: ${name}-${version}-setup.${ext}
+  artifactName: ${name}-setup.${ext}
   shortcutName: ${productName}
   uninstallDisplayName: ${productName}
   createDesktopShortcut: always
